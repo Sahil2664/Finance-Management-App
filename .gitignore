@@ -1,0 +1,13 @@
+# Maven
+target/
+
+# Java
+*.class
+
+# Runtime files
+transactions.dat
+
+# IDE
+.idea/
+.vscode/
+*.iml
