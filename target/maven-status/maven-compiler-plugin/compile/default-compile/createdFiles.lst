@@ -1,0 +1,12 @@
+com\financeapp\Transaction.class
+com\financeapp\HistoryPanel.class
+com\financeapp\LoginFrame.class
+com\financeapp\Main.class
+com\financeapp\DashboardFrame.class
+com\financeapp\DashboardPanel.class
+com\financeapp\UIStyle.class
+com\financeapp\AuthService.class
+com\financeapp\LoginFrame$1.class
+com\financeapp\SummaryPanel.class
+com\financeapp\ThemeManager.class
+com\financeapp\TransactionManager.class
