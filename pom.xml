@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <!-- ================= BASIC PROJECT INFO ================= -->
+    <!-- ===== BASIC PROJECT INFO ===== -->
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.financeapp</groupId>
@@ -13,26 +13,25 @@
     <packaging>jar</packaging>
 
     <name>Personal Finance Management App</name>
-    <description>Java Swing based Personal Finance Management System with Login</description>
+    <description>Java Swing based Personal Finance Management System</description>
 
-    <!-- ================= JAVA VERSION ================= -->
+    <!-- ===== JAVA VERSION ===== -->
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- ================= DEPENDENCIES ================= -->
-    <!-- Swing uses only JDK, no extra dependencies needed -->
+    <!-- ===== DEPENDENCIES ===== -->
+    <!-- Swing is part of JDK, no dependency required -->
     <dependencies>
-        <!-- (Keep empty or add later if charts, etc. are used) -->
     </dependencies>
 
-    <!-- ================= BUILD CONFIG ================= -->
+    <!-- ===== BUILD CONFIGURATION ===== -->
     <build>
         <plugins>
 
-            <!-- Compiler Plugin -->
+            <!-- COMPILER PLUGIN -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -42,14 +41,27 @@
                 </configuration>
             </plugin>
 
-            <!-- Exec Plugin (RUNS YOUR APP) -->
+            <!-- EXEC PLUGIN (FOR mvn exec:java) -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <!-- 🔥 ONLY ENTRY POINT -->
                     <mainClass>com.financeapp.Main</mainClass>
+                </configuration>
+            </plugin>
+
+            <!-- JAR PLUGIN (CREATES JAR FILE) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.financeapp.Main</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
 
